@@ -1,0 +1,36 @@
+﻿<krpano version="1.19" title="Virtual Tour">
+
+	<!-- startup action - load the first scene -->
+	<action name="startup" autorun="onstart">
+		if(startscene === null OR !scene[get(startscene)], copy(startscene,scene[0].name); );
+		loadscene(get(startscene), null, MERGE);
+		if(startactions !== null, startactions() );
+	</action>
+
+	
+	<scene name="scene_0" title="scene-0" onstart="" havevrimage="true" thumburl="panos/MonValley_G_DirtRoad_8k.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/MonValley_G_DirtRoad_8k.tiles/preview.jpg" />
+
+	</scene>
+
+	<scene name="scene_1" title="scene-1" onstart="" havevrimage="true" thumburl="panos/Road_to_MonumentValley_8k.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/Road_to_MonumentValley_8k.tiles/preview.jpg" />
+
+	</scene>
+
+	<scene name="scene_2" title="scene-2" onstart="" havevrimage="true" thumburl="panos/Road_to_MonumentValley_8k.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview type="grid(cube,64,64,512,0xCCCCCC,0xF6F6F6,0x999999);" />
+
+	</scene>
+
+
+</krpano>
